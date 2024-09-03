@@ -1,0 +1,99 @@
+﻿@model CRUD.Models.Person
+@{
+    Layout = "~/Views/Shared/_CRUDLayoutPage.cshtml";
+}
+
+<div class="h-screen flex mt-4 md:mt-0 md:items-center justify-center mr-8 ml-8 mb-48 md:mb-0">
+    <div class="max-w-lg w-full drop-shadow-2xl">
+        <div style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);"
+             class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+            <div class="p-8">
+                <h2 class="text-center text-3xl font-extrabold text-white">
+                    Update Data
+                </h2>
+                <p class="mt-4 text-center text-gray-400">Edit Data from Table</p>
+                <form method="POST" action="@Url.Action("Update", "Home")" class="mt-8 space-y-6">
+                    <div class="rounded-md shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="FirstName">First Name</label>
+                                <input placeholder="First Name"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="FirstName"
+                                       name="FirstName"
+                                       type="text"
+                                       value="@Model.FirstName" />
+                            </div>
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="LastName">Last Name</label>
+                                <input placeholder="Last Name"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="LastName"
+                                       name="LastName"
+                                       type="text"
+                                       value="@Model.LastName" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 mt-4">
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="Email">Email</label>
+                                <input placeholder="Email"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="Email"
+                                       name="Email"
+                                       type="email"
+                                       value="@Model.Email" />
+                            </div>
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="Age">Age</label>
+                                <input placeholder="Age"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="Age"
+                                       name="Age"
+                                       type="number"
+                                       value="@Model.Age" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 mt-4">
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="PhoneNumber">Phone Number</label>
+                                <input placeholder="Phone Number"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="PhoneNumber"
+                                       name="PhoneNumber"
+                                       type="text"
+                                       value="@Model.PhoneNumber" />
+                            </div>
+                            <div class="relative flex-1">
+                                <label class="sr-only" for="City">City</label>
+                                <input placeholder="City"
+                                       class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                       required=""
+                                       id="City"
+                                       name="City"
+                                       type="text"
+                                       value="@Model.City" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Update Data
+                        </button>
+                        <a href="@Url.Action("Read", "Home")"
+                           class="mt-2 w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                            Back
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
